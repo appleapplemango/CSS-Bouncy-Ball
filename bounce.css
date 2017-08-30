@@ -1,9 +1,11 @@
+/*Flexbox to centre the ball */
+
 body{
     display: flex;
     justify-content: center;
 }
 
-/*Flexbox to centre the ball */
+/* MAKES THE BALL */
 
 .ball{
     width:100px;
@@ -12,4 +14,12 @@ body{
     background-color: aquamarine;
 }
 
-/* MAKES THE BALL */
+@keyframes bounce{
+    from{transform: translate3d(0,0,0);}
+    to{transform: translate3d(0,200px,0);}
+}
+
+/* @keyframes is used to control the animation, with from and to setting the start and endpoint. 
+    transform is used to move it along a 3-d axism with the translate3d fucntion taking the inputs o (x,y,z)
+    as the ball is only moving up/down, the y value is the only one that changes.
+ */
