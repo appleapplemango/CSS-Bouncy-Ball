@@ -13,12 +13,13 @@ body{
     border-radius: 50%;
     background-color: aquamarine;
     
-/* animation:bounce tells the element to use the keyframe rule bounce that is set below, as well as setting the length of the animation
+/* animation:bounce tells the element to use the keyframe rule bounce that is set below, as well as setting the length of the animation.
+    cubic bezier overrides the default timings of ease (which starts slow, speeds up in the middle and then slows again) to a custom speed timing more like a bouncy ball e.g. slow slow slow fast
    tells the element to reverse direction when it has finished the animation
    tells the animation to run for an infinite number of times    
     */    
     
-    animation: bounce 0.5s;
+    animation: bounce 0.5s cubic-bezier (.5,0.05,1,.5);
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
